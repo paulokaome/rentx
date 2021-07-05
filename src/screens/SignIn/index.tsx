@@ -14,6 +14,8 @@ import { PasswordInput } from "../../components/PasswordInput";
 import { useNavigation } from "@react-navigation/native";
 
 import { Container, Header, Title, Subtitle, Footer, Form } from "./styles";
+import { useAuth } from "../../hooks/auth";
+
 
 export function SignIn() {
   const theme = useTheme();
@@ -21,6 +23,8 @@ export function SignIn() {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigation();
+
+  const { signIn } = useAuth();
 
   function handleSignUp() {
     navigate.navigate("SignUpFirstStep");
@@ -36,6 +40,7 @@ export function SignIn() {
       });
 
       await Schema.validate({ email, password });
+      signIn({ email, password });
     } catch (error) {
       if (error instanceof Yup.ValidationError) {
         return Alert.alert("Opa", error.message);
@@ -47,6 +52,7 @@ export function SignIn() {
       }
     }
   }
+
   return (
     <KeyboardAvoidingView behavior="position" enabled>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>

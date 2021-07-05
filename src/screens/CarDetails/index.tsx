@@ -31,10 +31,12 @@ import {
   Footer,
 } from "./styles";
 import { Button } from "../../components/Button";
-import { CarDTO } from "../../dtos/CarDTO";
+import { Car } from "../../databases/model/Car";
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
 import { StyleSheet } from "react-native";
-import styled, { useTheme } from "styled-components";
+import { useTheme } from "styled-components";
+import { CarDTO } from "../../dtos/CarDTO";
+
 
 interface Params {
   car: CarDTO;
@@ -114,8 +116,8 @@ export function CarDetails() {
             <Name>{car.name}</Name>
           </Description>
           <Rent>
-            <Period>{car.rent.period}</Period>
-            <Price>R${car.rent.price}</Price>
+            <Period>{car.period}</Period>
+            <Price>R${car.price}</Price>
           </Rent>
         </Details>
         <Acessories>

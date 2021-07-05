@@ -13,13 +13,12 @@ import {
   CarImage,
 } from "./styles";
 
-import { CarDTO } from "../../dtos/CarDTO";
-import Gasoline from "../../assets/gasoline.svg";
+import { Car as ModelCar } from "../../databases/model/Car";
 import { RectButtonProps } from "react-native-gesture-handler";
 import { getAceIcon } from "../../utils/getAceIcon";
 
 interface Props extends RectButtonProps {
-  data: CarDTO;
+  data: ModelCar;
 }
 
 export function Car({ data, ...rest }: Props) {
@@ -33,8 +32,8 @@ export function Car({ data, ...rest }: Props) {
 
         <About>
           <Rent>
-            <Period>{data.rent.period}</Period>
-            <Price>{`R$ ${data.rent.price}`}</Price>
+            <Period>{data.period}</Period>
+            <Price>{`R$ ${data.price}`}</Price>
           </Rent>
           <Type>
               <MotIcon/>
