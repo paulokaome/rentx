@@ -8,7 +8,7 @@
 
 ## 📳 Para os Amantes de Carro...!
 
-Rentx tem o melhor da tecnologia mobile , começando pelo uso de Melondb para o uso de offline first trazendo assim uma experiênciamesmo fluída mesmo se o usuário estiver sem conexão com a internet, styled componentes para estilização usando typescript e datefns para controle de datas, aqui temos também o uso do Calendar picker para customização e implantação do calendário de forma simples e otimizada , o bom e velho Axios para conexão de apis , trazendo facilidade no uso dos protocolos HTTP(CRUD ).Tudo usando Typescript para adicionar tipagem e dinamismo ao nosso projeto.
+Rentx tem o melhor da tecnologia mobile , começando pelo uso de Melondb para o uso de offline first trazendo assim uma experiência fluída , mesmo se o usuário estiver sem conexão com a internet, styled componentes para estilização usando typescript e datefns para controle de datas, aqui temos também o uso do Calendar picker para customização e implantação do calendário de forma simples e otimizada , o bom e velho Axios para conexão de apis , trazendo facilidade no uso dos protocolos HTTP(CRUD ).Tudo usando Typescript para adicionar tipagem e dinamismo ao nosso projeto.
 
 ## 📚 Algumas Tecnologias usadas no projeto...
 
